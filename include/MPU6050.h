@@ -16,7 +16,7 @@ void setup() {
     Wire.write(0x6B);             // Talk to the register 6B
     Wire.write(0x00);             // Make reset - place a 0 into the 6B register
     Wire.endTransmission(true);   // end the transmission
-    /*
+    
     // Configure Accelerometer Sensitivity - Full Scale Range (default +/- 2g)
     Wire.beginTransmission(MPU);
     Wire.write(0x1C);                  //Talk to the ACCEL_CONFIG register (1C hex)
@@ -28,7 +28,7 @@ void setup() {
     Wire.write(0x10);                   // Set the register bits as 00010000 (1000deg/s full scale)
     Wire.endTransmission(true);
     delay(20);
-    */
+    
     // Call this function if you need to get the IMU error values for your module
     calculate_IMU_error();
     delay(20);

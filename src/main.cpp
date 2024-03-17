@@ -1,18 +1,16 @@
 #include <Arduino.h>
 
+#include "MPU6050.h"
+#include "HCSR04.h"
 // put function declarations here:
-int myFunction(int, int);
+
+#define SERIAL_USB Serial
 
 void setup() {
-    // put your setup code here, to run once:
-    int result = myFunction(2, 3);
+    SERIAL_USB.begin(19200);
+    
 }
 
 void loop() {
     // put your main code here, to run repeatedly:
-}
-
-// put function definitions here:
-int myFunction(int x, int y) {
-    return x + y;
 }
